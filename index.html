@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <nav class="navbar">
   <h2>FN Hub</h2>
   <div>
@@ -10,67 +9,65 @@
     <button onclick="showTab('news')">News</button>
   </div>
 </nav>
-<section id="home" class="tab active">
-  <h1>Welcome to FN Hub</h1>
-  <p>Your Fortnite dashboard for streams, stats, maps, and pro settings.</p>
-</section>
 
-<section id="streams" class="tab">
-  <h1>Multi Stream Viewer</h1>
+<main>
+  <section id="home" class="tab active">
+    <h1>Welcome to FN Hub</h1>
+    <p>Your Fortnite dashboard for streams, stats, maps, and pro settings.</p>
 
-  <div class="controls">
-    <input id="streamInput" type="text" placeholder="Enter Twitch name, ex: clix" />
-    <button onclick="addStream()">Add Stream</button>
-    <button onclick="clearStreams()">Clear All</button>
-  </div>
+    <div class="home-grid">
+      <div class="home-card">
+        <h2>Recent News</h2>
+        <p>Patch notes, item updates, tournament changes, and season news.</p>
+      </div>
 
-  <div id="streamGrid" class="stream-grid"></div>
-</section>
+      <div class="home-card">
+        <h2>Recent Tweets / Posts</h2>
+        <p>Embed FortniteStatus, FortniteGame, or pro player posts here.</p>
+      </div>
 
-<section id="pros" class="tab">
-  <h1>Pro Settings</h1>
-  <p>Coming soon: sensitivity, keybinds, gear, and graphics settings.</p>
-</section>
+      <div class="home-card">
+        <h2>Popular YouTube Videos</h2>
+        <iframe 
+          src="https://www.youtube.com/embed?listType=search&list=Fortnite%20tips%20and%20tricks"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </section>
 
-<section id="maps" class="tab">
-  <h1>Map Codes</h1>
-  <p>Coming soon: 1v1s, box fights, zone wars, aim training, and XP maps.</p>
-</section>
+  <section id="streams" class="tab">
+    <h1>Multi Stream Viewer</h1>
+    <p>Add Twitch channels and watch them together.</p>
 
-<section id="drops" class="tab">
-  <h1>Drop Maps</h1>
-  <p>Coming soon: best drops, loot routes, and ranked/tournament spots.</p>
-</section>
-
-<section id="news" class="tab">
-  <h1>News</h1>
-  <p>Coming soon: updates, patch notes, and social posts.</p>
-</section>
-
-
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FN Multi Stream Hub</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <h1>FN Multi Stream Hub</h1>
-    <p>Watch multiple Twitch streams at once.</p>
-  </header>
-
-  <main>
-    <section class="controls">
+    <div class="controls">
       <input id="streamInput" type="text" placeholder="Enter Twitch name, ex: clix" />
       <button onclick="addStream()">Add Stream</button>
       <button onclick="clearStreams()">Clear All</button>
-    </section>
+    </div>
 
-    <section id="streamGrid" class="stream-grid"></section>
-  </main>
+    <div id="streamGrid" class="stream-grid"></div>
+  </section>
 
-  <script src="script.js"></script>
-</body>
-</html>
+  <section id="pros" class="tab">
+    <h1>Pro Settings</h1>
+    <p>Coming soon: sensitivity, keybinds, gear, and graphics settings.</p>
+  </section>
+
+  <section id="maps" class="tab">
+    <h1>Map Codes</h1>
+    <p>Coming soon: 1v1s, box fights, zone wars, aim training, and XP maps.</p>
+  </section>
+
+  <section id="drops" class="tab">
+    <h1>Drop Maps</h1>
+    <p>Coming soon: best drops, loot routes, and ranked/tournament spots.</p>
+  </section>
+
+  <section id="news" class="tab">
+    <h1>News</h1>
+    <p>Coming soon: updates, patch notes, and social posts.</p>
+  </section>
+</main>
+
+<script src="script.js"></script>
