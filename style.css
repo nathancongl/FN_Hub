@@ -107,6 +107,7 @@ body::before {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
+  margin-top: 20px;
 }
 .panel {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
