@@ -77,3 +77,39 @@ iframe {
   height: 300px;
   border: none;
 }
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #181825;
+  padding: 15px 25px;
+  border-bottom: 1px solid #2a2a3a;
+}
+
+.navbar h2 {
+  margin: 0;
+}
+
+.navbar div {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.navbar button {
+  background: transparent;
+  border: 1px solid #9146ff;
+}
+
+.navbar button:hover {
+  background: #9146ff;
+}
+
+.tab {
+  display: none;
+  padding: 25px;
+}
+
+.tab.active {
+  display: block;
+}
