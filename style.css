@@ -1,9 +1,18 @@
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: #f7fbff;
 }
 
+/* AQUA STRIP */
+body::before {
+  content: "";
+  display: block;
+  height: 6px;
+  width: 100%;
+  background: linear-gradient(to right, #00e5c2, #00bcd4);
+}
 /* TOP BAR */
 .navbar {
   height: 80px;
@@ -18,10 +27,19 @@ body {
 /* TITLE */
 .title {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 40px;
+  font-size: 42px;
   letter-spacing: 4px;
-  color: #1479d4;
   margin: 0;
+}
+
+/* FN = light blue */
+.fn {
+  color: #1479d4;
+}
+
+/* HUB = darker */
+.title {
+  color: #0f1d2e;
 }
 
 /* MAIN CONTENT AREA */
