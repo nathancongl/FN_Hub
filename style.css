@@ -93,3 +93,11 @@ body::before {
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
+.panel {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.panel:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
