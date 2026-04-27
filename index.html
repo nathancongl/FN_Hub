@@ -1,4 +1,53 @@
 <!DOCTYPE html>
+<nav class="navbar">
+  <h2>FN Hub</h2>
+  <div>
+    <button onclick="showTab('home')">Home</button>
+    <button onclick="showTab('streams')">Streams</button>
+    <button onclick="showTab('pros')">Pro Settings</button>
+    <button onclick="showTab('maps')">Map Codes</button>
+    <button onclick="showTab('drops')">Drop Maps</button>
+    <button onclick="showTab('news')">News</button>
+  </div>
+</nav>
+<section id="home" class="tab active">
+  <h1>Welcome to FN Hub</h1>
+  <p>Your Fortnite dashboard for streams, stats, maps, and pro settings.</p>
+</section>
+
+<section id="streams" class="tab">
+  <h1>Multi Stream Viewer</h1>
+
+  <div class="controls">
+    <input id="streamInput" type="text" placeholder="Enter Twitch name, ex: clix" />
+    <button onclick="addStream()">Add Stream</button>
+    <button onclick="clearStreams()">Clear All</button>
+  </div>
+
+  <div id="streamGrid" class="stream-grid"></div>
+</section>
+
+<section id="pros" class="tab">
+  <h1>Pro Settings</h1>
+  <p>Coming soon: sensitivity, keybinds, gear, and graphics settings.</p>
+</section>
+
+<section id="maps" class="tab">
+  <h1>Map Codes</h1>
+  <p>Coming soon: 1v1s, box fights, zone wars, aim training, and XP maps.</p>
+</section>
+
+<section id="drops" class="tab">
+  <h1>Drop Maps</h1>
+  <p>Coming soon: best drops, loot routes, and ranked/tournament spots.</p>
+</section>
+
+<section id="news" class="tab">
+  <h1>News</h1>
+  <p>Coming soon: updates, patch notes, and social posts.</p>
+</section>
+
+
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
