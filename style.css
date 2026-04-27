@@ -197,3 +197,11 @@ input {
 .tab.active {
   display: block;
 }
+.tab {
+  display: none;
+  padding: 30px;
+}
+
+.tab.active {
+  display: block;
+}
