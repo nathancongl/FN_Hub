@@ -45,6 +45,12 @@ body::before {
 /* MAIN CONTENT AREA */
 .content {
   padding: 10px 40px 40px;
+
+  background-image: url('FOrnite.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
   min-height: calc(100vh - 80px);
 }
 .panel {
