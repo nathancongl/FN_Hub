@@ -48,15 +48,17 @@ function clearStreams() {
 }
 
 const videos = [
-  "https://www.youtube.com/embed/5uE0XFJSVZA",
-  "https://www.youtube.com/embed/3pLrJXo9L6I",
-  "https://www.youtube.com/embed/jfKfPfyJRdk"
+  "LDU_Txk06tM",
+  "xRPjKQtRXR8",
+  "b6p3X6v7N9A",
+  "smK-8jF9r7A"
 ];
 
 function shuffleVideo() {
   const frame = document.getElementById("youtubeFrame");
   const randomVideo = videos[Math.floor(Math.random() * videos.length)];
-  frame.src = randomVideo;
+
+  frame.src = `https://www.youtube.com/embed/${randomVideo}`;
 }
 
 window.onload = function () {
