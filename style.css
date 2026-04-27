@@ -113,3 +113,25 @@ iframe {
 .tab.active {
   display: block;
 }
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.home-card {
+  background: #1f1f2e;
+  border: 1px solid #2a2a3a;
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.home-card h2 {
+  margin-top: 0;
+}
+
+.home-card iframe {
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+}
