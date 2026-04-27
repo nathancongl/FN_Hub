@@ -46,12 +46,21 @@ body::before {
 .content {
   padding: 10px 40px 40px;
 
-  background-image: url('FOrnite.jpg');
+  background: linear-gradient(
+      rgba(0,0,0,0.5),
+      rgba(0,0,0,0.5)
+    ),
+    url('battlebus.jpg');
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
   min-height: calc(100vh - 80px);
+}
+.panel {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(6px);
 }
 .panel {
   background: white;
