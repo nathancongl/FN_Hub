@@ -17,7 +17,27 @@ function addStream() {
 
   const card = document.createElement("div");
   card.className = "stream-card";
+function addStream() {
+  const channel = streamInput.value.trim().toLowerCase();
 
+  if (!channel) return;
+
+  const parent = getParentDomain();
+
+  const card = document.createElement("div");
+  card.className = "stream-card";
+
+  card.innerHTML = `
+    <h2>${channel}</h2>
+    <iframe
+      src="https://player.twitch.tv/?channel=${channel}&parent=${parent}&muted=true"
+      allowfullscreen>
+    </iframe>
+  `;
+
+  streamGrid.appendChild(card);
+  streamInput.value = "";
+}
   card.innerHTML = `
     <h2>${channel}</h2>
     <iframe
