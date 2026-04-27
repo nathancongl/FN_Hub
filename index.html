@@ -2,117 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>FN Hub</title>
+
+  <!-- Fortnite-style font -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <nav class="navbar">
-    <h2>FN Hub</h2>
+  <h1 class="title">FN HUB</h1>
 
-    <div class="nav-buttons">
-      <button onclick="showTab('home')">Home</button>
-      <button onclick="showTab('streams')">Streams</button>
-      <button onclick="showTab('pros')">Pro Settings</button>
-      <button onclick="showTab('maps')">Map Codes</button>
-      <button onclick="showTab('drops')">Drop Maps</button>
-      <button onclick="showTab('news')">News</button>
-    </div>
-  </nav>
-
-  <main>
-
-    <!-- HOME -->
-    <div class="home-grid">
-
-  <div class="home-card">
-    <h2>Recent News</h2>
-    <div id="newsList" class="news-list"></div>
-  </div>
-
-  <div class="home-card">
-  <h2>Recommended Video</h2>
-
-  <iframe
-    id="youtubeFrame"
-    src="https://www.youtube.com/embed/LDU_Txk06tM"
-    allowfullscreen>
-  </iframe>
-
-  <button onclick="shuffleVideo()">Shuffle Video</button>
-</div>
-
-  <div class="home-card">
-    <h2>Fortnite Posts</h2>
-    <a class="twitter-timeline" data-height="350" data-theme="dark"
-      href="https://twitter.com/FortniteGame">
-      Tweets by FortniteGame
-    </a>
-  </div>
-
-  <div class="home-card">
-    <h2>Fortnite Competitive</h2>
-    <a class="twitter-timeline" data-height="350" data-theme="dark"
-      href="https://twitter.com/FNCompetitive">
-      Tweets by FNCompetitive
-    </a>
-  </div>
-
-</div>
-
-<script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
-
-    <!-- STREAMS -->
-    <section id="streams" class="tab">
-      <div class="section-header">
-        <h1>Multi Stream Viewer</h1>
-        <p>Add Twitch channels and watch multiple streams at once.</p>
-      </div>
-
-      <div class="controls">
-        <input id="streamInput" type="text" placeholder="Enter Twitch name, ex: clix" />
-        <button onclick="addStream()">Add Stream</button>
-        <button onclick="clearStreams()">Clear All</button>
-      </div>
-
-      <div id="streamGrid" class="stream-grid"></div>
-    </section>
-
-    <!-- PRO SETTINGS -->
-    <section id="pros" class="tab">
-      <div class="section-header">
-        <h1>Pro Settings</h1>
-        <p>Coming soon: sensitivity, keybinds, gear, and graphics settings.</p>
-      </div>
-    </section>
-
-    <!-- MAP CODES -->
-    <section id="maps" class="tab">
-      <div class="section-header">
-        <h1>Map Codes</h1>
-        <p>Coming soon: 1v1s, box fights, zone wars, aim training, and XP maps.</p>
-      </div>
-    </section>
-
-    <!-- DROP MAPS -->
-    <section id="drops" class="tab">
-      <div class="section-header">
-        <h1>Drop Maps</h1>
-        <p>Coming soon: best drops, loot routes, and ranked spots.</p>
-      </div>
-    </section>
-
-    <!-- NEWS -->
-    <section id="news" class="tab">
-      <div class="section-header">
-        <h1>News</h1>
-        <p>Coming soon: patch notes, updates, and social posts.</p>
-      </div>
-    </section>
-
-  </main>
-
-  <script src="script.js"></script>
 </body>
 </html>
