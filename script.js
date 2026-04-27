@@ -1,79 +1,41 @@
-* {
-  box-sizing: border-box;
+const streamGrid = document.getElementById("streamGrid");
+const streamInput = document.getElementById("streamInput");
+
+function getParentDomain() {
+  if (window.location.hostname === "") {
+    return "localhost";
+  }
+  return window.location.hostname;
 }
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0f0f16;
-  color: white;
+function addStream() {
+  const channel = streamInput.value.trim().toLowerCase();
+
+  if (!channel) return;
+
+  const parent = getParentDomain();
+
+  const card = document.createElement("div");
+  card.className = "stream-card";
+
+  card.innerHTML = `
+    <h2>${channel}</h2>
+    <iframe
+      src="https://player.twitch.tv/?channel=${channel}&parent=${parent}&muted=true"
+      allowfullscreen>
+    </iframe>
+  `;
+
+  streamGrid.appendChild(card);
+  streamInput.value = "";
 }
 
-header {
-  text-align: center;
-  padding: 30px 15px;
-  background: #181825;
+function clearStreams() {
+  streamGrid.innerHTML = "";
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2rem;
-}
-
-header p {
-  color: #bbb;
-}
-
-.controls {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  padding: 20px;
-  flex-wrap: wrap;
-}
-
-input {
-  padding: 12px;
-  width: 260px;
-  border-radius: 8px;
-  border: none;
-}
-
-button {
-  padding: 12px 16px;
-  border: none;
-  border-radius: 8px;
-  background: #9146ff;
-  color: white;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-button:hover {
-  background: #772ce8;
-}
-
-.stream-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 15px;
-  padding: 20px;
-}
-
-.stream-card {
-  background: #1f1f2e;
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.stream-card h2 {
-  font-size: 1rem;
-  padding: 10px;
-  margin: 0;
-}
-
-iframe {
-  width: 100%;
-  height: 300px;
-  border: none;
-}
+streamInput.addEventListener("keydown", function(event) {
+  if (event.key === "Enter") {
+    addStream();
+  }
+});
