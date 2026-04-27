@@ -24,41 +24,38 @@
   <main>
 
     <!-- HOME -->
-    <section id="home" class="tab active">
-      <div class="hero">
-        <h1>Welcome to FN Hub</h1>
-        <p>Your dashboard for Fortnite streams, news, videos, maps, and pro settings.</p>
-      </div>
+    <div class="home-grid">
 
-      <div class="home-grid">
-        <div class="home-card">
-          <h2>Recent News</h2>
-          <ul>
-            <li>New Fortnite updates and patch notes</li>
-            <li>Weapon balance changes</li>
-            <li>FNCS and tournament info</li>
-            <li>Map changes and new POIs</li>
-          </ul>
-        </div>
+  <div class="home-card">
+    <h2>Recent News</h2>
+    <div id="newsList" class="news-list"></div>
+  </div>
 
-        <div class="home-card">
-          <h2>Popular Videos</h2>
-          <iframe 
-            src="https://www.youtube.com/embed?listType=search&list=Fortnite%20highlights"
-            allowfullscreen>
-          </iframe>
-        </div>
+  <div class="home-card">
+    <h2>Recommended Video</h2>
+    <iframe id="youtubeFrame" allowfullscreen></iframe>
+    <button onclick="shuffleVideo()">Shuffle Video</button>
+  </div>
 
-        <div class="home-card">
-          <h2>Recent Posts</h2>
-          <p><strong>@FortniteGame</strong></p>
-          <p>Latest game updates and announcements.</p>
+  <div class="home-card">
+    <h2>Fortnite Posts</h2>
+    <a class="twitter-timeline" data-height="350" data-theme="dark"
+      href="https://twitter.com/FortniteGame">
+      Tweets by FortniteGame
+    </a>
+  </div>
 
-          <p><strong>@FNCompetitive</strong></p>
-          <p>Competitive Fortnite news and tournament updates.</p>
-        </div>
-      </div>
-    </section>
+  <div class="home-card">
+    <h2>Fortnite Competitive</h2>
+    <a class="twitter-timeline" data-height="350" data-theme="dark"
+      href="https://twitter.com/FNCompetitive">
+      Tweets by FNCompetitive
+    </a>
+  </div>
+
+</div>
+
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
     <!-- STREAMS -->
     <section id="streams" class="tab">
