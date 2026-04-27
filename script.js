@@ -50,3 +50,48 @@ streamInput.addEventListener("keydown", function(event) {
     addStream();
   }
 });
+const videos = [
+  "https://www.youtube.com/embed/videoseries?list=PLlW5c5f1SN2Zz4HjB0Q9dBKR8cMaT1N7U",
+  "https://www.youtube.com/embed?listType=search&list=Fortnite%20tips",
+  "https://www.youtube.com/embed?listType=search&list=Fortnite%20competitive",
+  "https://www.youtube.com/embed?listType=search&list=Fortnite%20highlights"
+];
+
+const newsItems = [
+  {
+    title: "Official Fortnite News",
+    text: "Latest Fortnite updates, announcements, and patch notes.",
+    link: "https://www.fortnite.com/news"
+  },
+  {
+    title: "Fortnite Competitive",
+    text: "Tournament updates, ranked news, and competitive announcements.",
+    link: "https://www.fortnite.com/news?category=fortnite-competitive"
+  },
+  {
+    title: "Fortnite Ecosystem Release Notes",
+    text: "UEFN, Creative, and ecosystem update notes.",
+    link: "https://dev.epicgames.com/documentation/fortnite"
+  }
+];
+
+function shuffleVideo() {
+  const frame = document.getElementById("youtubeFrame");
+  const randomVideo = videos[Math.floor(Math.random() * videos.length)];
+  frame.src = randomVideo;
+}
+
+function loadNews() {
+  const newsList = document.getElementById("newsList");
+
+  newsList.innerHTML = newsItems.map(item => `
+    <div class="news-item">
+      <h3>${item.title}</h3>
+      <p>${item.text}</p>
+      <a href="${item.link}" target="_blank">Read more</a>
+    </div>
+  `).join("");
+}
+
+shuffleVideo();
+loadNews();
